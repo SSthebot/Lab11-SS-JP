@@ -22,13 +22,13 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.subtract(0, 5), -5)
         self.assertAlmostEqual(calculator.subtract(5.5, 2.3), 3.2)
     
-    def test_divide_by_zero(self):
+    def test_div_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
-            calculator.divide(0, 10)
+            calculator.div(0, 10)
         with self.assertRaises(ZeroDivisionError):
-            calculator.divide(0, 0)
+            calculator.div(0, 0)
         with self.assertRaises(ZeroDivisionError):
-            calculator.divide(0, -5)
+            calculator.div(0, -5)
     
     def test_logarithm(self):
         self.assertAlmostEqual(calculator.logarithm(10, 100), 2.0)
@@ -50,22 +50,22 @@ class TestCalculator(unittest.TestCase):
 
 
 def test_multiply(self):
-    self.assertEqual(calculator.multiply(2, 3), 6)
-    self.assertEqual(calculator.multiply(-2, 3), -6)
-    self.assertEqual(calculator.multiply(-2, -3), 6)
-    self.assertEqual(calculator.multiply(0, 5), 0)
-    self.assertEqual(calculator.multiply(5, 0), 0)
-    self.assertAlmostEqual(calculator.multiply(2.5, 4), 10.0)
+    self.assertEqual(calculator.mul(2, 3), 6)
+    self.assertEqual(calculator.mul(-2, 3), -6)
+    self.assertEqual(calculator.mul(-2, -3), 6)
+    self.assertEqual(calculator.mul(0, 5), 0)
+    self.assertEqual(calculator.mul(5, 0), 0)
+    self.assertAlmostEqual(calculator.mul(2.5, 4), 10.0)
 
 
 def test_divide(self):
-    self.assertEqual(calculator.divide(2, 10), 5.0)
-    self.assertEqual(calculator.divide(4, 20), 5.0)
-    self.assertAlmostEqual(calculator.divide(3, 10), 3.333333333, places=7)
-    self.assertEqual(calculator.divide(-2, 10), -5.0)
-    self.assertEqual(calculator.divide(2, -10), -5.0)
+    self.assertEqual(calculator.div(2, 10), 5.0)
+    self.assertEqual(calculator.div(4, 20), 5.0)
+    self.assertAlmostEqual(calculator.div(3, 10), 3.333333333, places=7)
+    self.assertEqual(calculator.div(-2, 10), -5.0)
+    self.assertEqual(calculator.div(2, -10), -5.0)
     with self.assertRaises(ZeroDivisionError):
-        calculator.divide(0, 10)
+        calculator.div(0, 10)
 
 
 def test_log_invalid_argument(self):
