@@ -16,23 +16,23 @@ def hypotenuse(a, b):
 def add(a, b):
     return a + b
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
-def mul(a, b):
+def multiply(a, b):
     return a * b
 
-def div(a, b):
+def divide(a, b):
     if a == 0:
-        raise ZeroDivisionError("Cannot divide by zero.")
+        raise ZeroDivisionError("Cannot divide by zero (a = 0).")
     return b / a
 
-def log(a, b):
+def logarithm(a, b):
     if a <= 0 or a == 1:
-        raise ValueError("Base must be positive and not equal to 1.")
+        raise ValueError("Logarithm base must be positive and not equal to 1.")
     if b <= 0:
-        raise ValueError("Argument must be positive.")
+        raise ValueError("Logarithm argument must be positive.")
     return math.log(b) / math.log(a)
 
-def exp(a, b):
+def exponent(a, b):
     return a ** b
