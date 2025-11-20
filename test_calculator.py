@@ -1,3 +1,7 @@
+# https://github.com/SSthebot/Lab11-SS-JP
+# Partner 1: Shyaam Shanmugam
+# Partner 2: Julian Perez
+
 import unittest
 import calculator
 
